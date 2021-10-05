@@ -20,7 +20,6 @@ class Textarea extends Component {
     }
     numWords += 1;
 
-    // Display it as output
     this.setState((lastCount) => {
       return {
         wordCount: (lastCount.wordCount = numWords)
@@ -30,10 +29,12 @@ class Textarea extends Component {
   render() {
     return (
       <div>
-        {/* <textarea cols="30" rows="10" onInput={this.countWords}></textarea> */}
-        <TextareaAutosize id="data" onInput={this.countWords} />
+        <center style={{ marginTop: 150 }}>
+          {/* <textarea cols="30" rows="10" onInput={this.countWords}></textarea> */}
+          <TextareaAutosize id="data" onInput={this.countWords} cols="50" />
 
-        <h2>word: {this.state.wordCount}</h2>
+          <h2>word: {this.state.wordCount}</h2>
+        </center>
       </div>
     );
   }
