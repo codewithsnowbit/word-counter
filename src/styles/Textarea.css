@@ -15,9 +15,10 @@ body {
 .cardBg {
   background: #1b2a41;
   border-radius: 15px;
+  box-shadow: 0 0 50px #4fc3f7;
 }
 .childBg {
-  background: #1b2a41;
+  background: transparent;
   color: #ccc9dc;
 }
 .title {
