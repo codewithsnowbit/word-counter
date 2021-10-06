@@ -6,12 +6,12 @@ function Home() {
     <div>
       <div className="globe"></div>
       <br />
-      <h1 className="text-center">
-        Welcome to the word couter,{" "}
+      <h2 className="text-center">
+        Welcome to the word couter🎉,{" "}
         <Link to="/app">
-          <span className="text-decoration-underline span">Let's go</span>{" "}
+          <span className="text-decoration-underline span">Let's go </span>{" "}
         </Link>
-      </h1>
+      </h2>
     </div>
   );
 }
