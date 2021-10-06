@@ -7,7 +7,7 @@ function Home() {
       <div className="globe"></div>
       <br />
       <h2 className="text-center">
-        Welcome to the word couter🎉,{" "}
+        Welcome to the word counter🎉,{" "}
         <Link to="/app">
           <span className="text-decoration-underline span">Let's go </span>{" "}
         </Link>
