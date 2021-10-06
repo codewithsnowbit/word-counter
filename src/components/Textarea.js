@@ -108,6 +108,7 @@ class Textarea extends Component {
               </ListGroup>
             </Card.Body>
           </Card>
+          {/* <div className="globe"></div> */}
         </center>
       </div>
     );

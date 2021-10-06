@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Display&display=swap");
+/* https://coolors.co/000000-0c1821-1b2a41-324a5f-ccc9dc */
 body {
   font-family: "Noto Sans Display", sans-serif;
   background: #0c1821;
@@ -25,6 +26,17 @@ body {
 }
 .stats {
   font-size: 20px;
+}
+.globe {
+  position: absolute;
+  top: calc(50% - 150px);
+  left: calc(50% - 150px);
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  box-shadow: inset 0 0 50px #fff, inset 20px 0 80px #f0f,
+    inset -20px 0 80px #0ff, inset 20px 0 300px #f0f, inset -20px 0 300px #0ff,
+    0 0 50px #fff, -10px 0 80px #f0f, 10px 0 80px #0ff;
 }
 
 @media only screen and (max-width: 600px) {
