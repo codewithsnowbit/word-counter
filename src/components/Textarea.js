@@ -89,7 +89,8 @@ class Textarea extends Component {
                 id="data"
                 onInput={this.countWords}
                 className="form-control"
-                placeholder="Enter text"
+                placeholder="Enter text; Eg. SnowBit or just anything"
+                spellCheck="true"
               />{" "}
               <br />
               <ListGroup variant="flush">
