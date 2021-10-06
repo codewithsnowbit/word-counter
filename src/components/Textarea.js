@@ -89,7 +89,7 @@ class Textarea extends Component {
                 id="data"
                 onInput={this.countWords}
                 className="form-control"
-                placeholder="Enter text; Eg. SnowBit or just anything"
+                placeholder="Enter text like 'SnowBit'"
                 spellCheck="true"
               />{" "}
               <br />
