@@ -35,6 +35,7 @@ class Textarea extends Component {
     this.handleLongWordCount();
     this.longestWord();
     this.charaCount();
+    this.typing();
   }
   handleLongWordCount() {
     const text = document.getElementById("data");
@@ -69,6 +70,10 @@ class Textarea extends Component {
     this.setState((lastCount) => {
       charCount: lastCount.charCount = data.length;
     });
+  }
+  typing() {
+    const audio = new Audio("/type.mp3");
+    audio.play();
   }
 
   render() {
