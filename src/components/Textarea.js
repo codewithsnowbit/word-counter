@@ -74,6 +74,9 @@ class Textarea extends Component {
   render() {
     return (
       <div>
+        <h1 className="text-center  title">
+          Count words with just a few clicks
+        </h1>
         <center style={{ marginTop: 100 }}>
           {/* <textarea cols="30" rows="10" onInput={this.countWords}></textarea> */}
 
@@ -86,19 +89,20 @@ class Textarea extends Component {
                 id="data"
                 onInput={this.countWords}
                 className="form-control"
+                placeholder="Enter text"
               />{" "}
               <br />
               <ListGroup variant="flush">
-                <ListGroup.Item>
+                <ListGroup.Item className="stats">
                   Words count: <span>{this.state.wordCount}</span>{" "}
                 </ListGroup.Item>
-                <ListGroup.Item>
+                <ListGroup.Item className="stats">
                   Characters count: <span>{this.state.charCount}</span>{" "}
                 </ListGroup.Item>
-                <ListGroup.Item>
+                <ListGroup.Item className="stats">
                   Longest word : {this.state.longWord}
                 </ListGroup.Item>
-                <ListGroup.Item>
+                <ListGroup.Item className="stats">
                   Longest word count: {this.state.longCount}
                 </ListGroup.Item>
               </ListGroup>
