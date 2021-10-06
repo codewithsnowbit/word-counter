@@ -83,7 +83,7 @@ class Textarea extends Component {
           {/* <textarea id="data" cols="1" onInput={this.countWords}></textarea> */}
 
           {/* <h2>word: {this.state.wordCount}</h2> */}
-          <Card>
+          <Card className="cardBg">
             <Card.Body>
               <TextareaAutosize
                 id="data"
@@ -93,16 +93,16 @@ class Textarea extends Component {
               />{" "}
               <br />
               <ListGroup variant="flush">
-                <ListGroup.Item className="stats">
+                <ListGroup.Item className="stats childBg">
                   Words count: <span>{this.state.wordCount}</span>{" "}
                 </ListGroup.Item>
-                <ListGroup.Item className="stats">
+                <ListGroup.Item className="stats childBg">
                   Characters count: <span>{this.state.charCount}</span>{" "}
                 </ListGroup.Item>
-                <ListGroup.Item className="stats">
+                <ListGroup.Item className="stats childBg">
                   Longest word : {this.state.longWord}
                 </ListGroup.Item>
-                <ListGroup.Item className="stats">
+                <ListGroup.Item className="stats childBg">
                   Longest word count: {this.state.longCount}
                 </ListGroup.Item>
               </ListGroup>

@@ -1,11 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Display&display=swap");
 body {
   font-family: "Noto Sans Display", sans-serif;
+  background: #0c1821;
+  color: #ccc9dc;
 }
 #data {
   height: 400px;
   resize: vertical;
   font-size: 30px;
+  background: #324a5f;
+  color: #ccc9dc;
+}
+.cardBg {
+  background: #1b2a41;
+  border-radius: 15px;
+}
+.childBg {
+  background: #1b2a41;
+  color: #ccc9dc;
 }
 .title {
   font-weight: 900;
