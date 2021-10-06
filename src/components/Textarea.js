@@ -10,7 +10,8 @@ class Textarea extends Component {
     this.state = {
       wordCount: 0,
       longCount: 0,
-      longWord: ""
+      charCount: 0,
+      longWord: "No data"
     };
     this.countWords = this.countWords.bind(this);
   }
@@ -33,6 +34,7 @@ class Textarea extends Component {
     });
     this.handleLongWordCount();
     this.longestWord();
+    this.charaCount();
   }
   handleLongWordCount() {
     const text = document.getElementById("data");
@@ -62,6 +64,12 @@ class Textarea extends Component {
       };
     });
   }
+  charaCount() {
+    const data = document.getElementById("data").value;
+    this.setState((lastCount) => {
+      charCount: lastCount.charCount = data.length;
+    });
+  }
 
   render() {
     return (
@@ -82,7 +90,10 @@ class Textarea extends Component {
               <br />
               <ListGroup variant="flush">
                 <ListGroup.Item>
-                  Words: <span>{this.state.wordCount}</span>{" "}
+                  Words count: <span>{this.state.wordCount}</span>{" "}
+                </ListGroup.Item>
+                <ListGroup.Item>
+                  Characters count: <span>{this.state.charCount}</span>{" "}
                 </ListGroup.Item>
                 <ListGroup.Item>
                   Longest word : {this.state.longWord}
