@@ -1,5 +1,8 @@
 import { Component } from "react";
+import { Card } from "react-bootstrap";
 import TextareaAutosize from "react-textarea-autosize";
+
+import "../styles/Textarea.css";
 
 class Textarea extends Component {
   constructor() {
@@ -9,6 +12,7 @@ class Textarea extends Component {
     };
     this.countWords = this.countWords.bind(this);
   }
+
   countWords() {
     var text = document.getElementById("data").value;
     var numWords = 0;
@@ -29,11 +33,26 @@ class Textarea extends Component {
   render() {
     return (
       <div>
-        <center style={{ marginTop: 150 }}>
+        <center style={{ marginTop: 100 }}>
           {/* <textarea cols="30" rows="10" onInput={this.countWords}></textarea> */}
-          <TextareaAutosize id="data" onInput={this.countWords} cols="50" />
 
-          <h2>word: {this.state.wordCount}</h2>
+          {/* <textarea id="data" cols="1" onInput={this.countWords}></textarea> */}
+
+          {/* <h2>word: {this.state.wordCount}</h2> */}
+          <Card>
+            <Card.Body>
+              <TextareaAutosize
+                id="data"
+                onInput={this.countWords}
+                className="form-control"
+              />{" "}
+              <br />
+              <hr />
+              <Card.Text>
+                <h3 className="fw-bolder">{this.state.wordCount} words</h3>
+              </Card.Text>
+            </Card.Body>
+          </Card>
         </center>
       </div>
     );

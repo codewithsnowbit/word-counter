@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+body {
+  font-family: "Roboto", sans-serif;
+}
+#data {
+  height: 400px;
+
+  resize: horizontal;
+}
+
+@media only screen and (max-width: 600px) {
+  #data {
+    width: 500px;
+  }
+}
