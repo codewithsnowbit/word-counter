@@ -46,4 +46,10 @@ body {
   #data {
     width: 500px;
   }
+  .childBg {
+    background: transparent;
+    color: #ccc9dc;
+    font-size: 15px;
+    font-family: "Press Start 2P", cursive;
+  }
 }

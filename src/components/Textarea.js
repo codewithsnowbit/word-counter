@@ -116,6 +116,7 @@ class Textarea extends Component {
           </Card>
           {/* <div className="globe"></div> */}
         </center>
+        <br />
       </div>
     );
   }
