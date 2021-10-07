@@ -8,6 +8,7 @@
   ],
   "main": "src/index.js",
   "dependencies": {
+    "animate.css": "4.1.1",
     "bootstrap": "5.1.1",
     "react": "17.0.2",
     "react-bootstrap": "1.6.4",
