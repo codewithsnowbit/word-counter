@@ -106,7 +106,7 @@ class Textarea extends Component {
                   Characters count: <span>{this.state.charCount}</span>{" "}
                 </ListGroup.Item>
                 <ListGroup.Item className="stats childBg">
-                  Longest word : {this.state.longWord}
+                  Longest word: {this.state.longWord}
                 </ListGroup.Item>
                 <ListGroup.Item className="stats childBg">
                   Longest word count: {this.state.longCount}
