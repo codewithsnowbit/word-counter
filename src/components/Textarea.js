@@ -72,7 +72,7 @@ class Textarea extends Component {
     });
   }
   typing() {
-    const audio = new Audio("/type.mp3");
+    const audio = new Audio("/type3.wav");
     audio.play();
   }
 
