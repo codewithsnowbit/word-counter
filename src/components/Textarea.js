@@ -93,7 +93,7 @@ class Textarea extends Component {
     if (x) {
       x = JSON.parse(x);
       var vol = x.h;
-      // this.handleURL();
+      this.handleURL();
     }
     let idoc = document.getElementById("data");
     idoc.onerror = function () {
