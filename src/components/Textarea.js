@@ -1,7 +1,7 @@
 import { Component } from "react";
 import { Card, ListGroup } from "react-bootstrap";
 import TextareaAutosize from "react-textarea-autosize";
-
+import copy from "copy-to-clipboard";
 import "../styles/Textarea.css";
 
 class Textarea extends Component {
@@ -102,6 +102,15 @@ class Textarea extends Component {
     idoc.value = vol ? vol : "";
     // eyJoIjoidW5kZWZpbmVkIn0
   }
+  handleCopy() {
+    copy(window.location);
+    const text = document.getElementById("copy");
+    text.innerText = "Copied!";
+    setTimeout(() => {
+      const text = document.getElementById("copy");
+      text.innerText = "Share page";
+    }, 2000);
+  }
   render() {
     return (
       <div>
@@ -136,6 +145,17 @@ class Textarea extends Component {
                 </ListGroup.Item>
                 <ListGroup.Item className="stats childBg">
                   Longest word count: {this.state.longCount}
+                </ListGroup.Item>{" "}
+                <hr />
+                <ListGroup.Item className="childBg share" align="right">
+                  <span
+                    id="copy"
+                    onClick={this.handleCopy}
+                    role="img"
+                    aria-label="clipboard"
+                  >
+                    Share / Save Page 📋
+                  </span>
                 </ListGroup.Item>
               </ListGroup>
             </Card.Body>
