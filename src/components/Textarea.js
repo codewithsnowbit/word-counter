@@ -105,11 +105,11 @@ class Textarea extends Component {
   handleCopy() {
     copy(window.location);
     const text = document.getElementById("copy");
-    text.innerText = "Copied!";
+    text.innerText = "URL Copied 🎉";
     setTimeout(() => {
       const text = document.getElementById("copy");
       text.innerText = "Share page";
-    }, 2000);
+    }, 5000);
   }
   render() {
     return (
