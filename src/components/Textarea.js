@@ -93,17 +93,14 @@ class Textarea extends Component {
     if (x) {
       x = JSON.parse(x);
       var vol = x.h;
-      this.handleURL();
+      // this.handleURL();
     }
     let idoc = document.getElementById("data");
     idoc.onerror = function () {
       return console.log("Error");
     };
-    idoc.value = vol;
-
-    if (idoc.vaule === "undefined") {
-      idoc.value = " ";
-    }
+    idoc.value = vol ? vol : "";
+    // eyJoIjoidW5kZWZpbmVkIn0
   }
   render() {
     return (
