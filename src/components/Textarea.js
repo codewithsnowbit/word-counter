@@ -15,7 +15,14 @@ class Textarea extends Component {
     };
     this.countWords = this.countWords.bind(this);
   }
+  componentDidMount() {
+    this.handleLoad();
+    this.countWords();
+  }
 
+  componentWillUnmount() {
+    window.removeEventListener("load", this.handleLoad);
+  }
   countWords() {
     var text = document.getElementById("data").value;
     var numWords = 0;
@@ -35,7 +42,7 @@ class Textarea extends Component {
     this.handleLongWordCount();
     this.longestWord();
     this.charaCount();
-    this.typing();
+    this.handleURL();
   }
   handleLongWordCount() {
     const text = document.getElementById("data");
@@ -52,6 +59,7 @@ class Textarea extends Component {
         longCount: (lastData.longCount = longestWord)
       };
     });
+    this.typing();
   }
   longestWord() {
     let text = document.getElementById("data").value;
@@ -75,7 +83,28 @@ class Textarea extends Component {
     const audio = new Audio("/type3.wav");
     audio.play();
   }
+  handleURL() {
+    const i = document.getElementById("data");
+    i.srcdoc = i.value;
+    window.location.hash = btoa(JSON.stringify({ h: i.value }));
+  }
+  handleLoad() {
+    var x = atob(window.location.hash.substr(1));
+    if (x) {
+      x = JSON.parse(x);
+      var vol = x.h;
+      this.handleURL();
+    }
+    let idoc = document.getElementById("data");
+    idoc.onerror = function () {
+      return console.log("Error");
+    };
+    idoc.value = vol;
 
+    if (idoc.vaule === "undefined") {
+      idoc.value = " ";
+    }
+  }
   render() {
     return (
       <div>
