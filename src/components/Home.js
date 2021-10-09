@@ -12,7 +12,13 @@ function Home() {
       <br />
       <Confetti width={width} height={height} recycle={false} />
       <h2 className="text-center animate__animated animate__tada">
-        Welcome to the Word Counter🎉,{" "}
+        Welcome to the Word Counter{" "}
+        <Link to="/easter" className="text-decoration-none">
+          <span role="img" aria-label="tada">
+            🎉
+          </span>
+        </Link>
+        ,{" "}
         <Link to="/app">
           <span className="text-decoration-underline span">Let's go </span>{" "}
         </Link>
