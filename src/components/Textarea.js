@@ -3,7 +3,6 @@ import { Card, ListGroup } from "react-bootstrap";
 import TextareaAutosize from "react-textarea-autosize";
 import copy from "copy-to-clipboard";
 import "../styles/Textarea.css";
-import Footer from "./Footer";
 
 class Textarea extends Component {
   constructor() {
@@ -170,7 +169,6 @@ class Textarea extends Component {
           </Card>
           {/* <div className="globe"></div> */}
         </center>
-        <Footer />
       </div>
     );
   }
