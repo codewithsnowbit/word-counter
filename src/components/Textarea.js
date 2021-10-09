@@ -114,6 +114,12 @@ class Textarea extends Component {
   render() {
     return (
       <div>
+        <link
+          rel="stylesheet"
+          href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+          integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+          crossOrigin="anonymous"
+        />
         <h1 className="text-center  title">
           Count words with just a few clicks
         </h1>
@@ -154,7 +160,7 @@ class Textarea extends Component {
                     role="img"
                     aria-label="clipboard"
                   >
-                    Share / Save Page 📋
+                    Share / Save Page &nbsp;<i className="fas fa-copy" />
                   </span>
                 </ListGroup.Item>
               </ListGroup>
