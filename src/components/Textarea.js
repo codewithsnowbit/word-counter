@@ -3,6 +3,7 @@ import { Card, ListGroup } from "react-bootstrap";
 import TextareaAutosize from "react-textarea-autosize";
 import copy from "copy-to-clipboard";
 import "../styles/Textarea.css";
+import Footer from "./Footer";
 
 class Textarea extends Component {
   constructor() {
@@ -160,7 +161,8 @@ class Textarea extends Component {
                     role="img"
                     aria-label="clipboard"
                   >
-                    Share / Save Page &nbsp;<i className="fas fa-copy" />
+                    Share / Save Page &nbsp;
+                    <i className="fas fa-copy" />
                   </span>
                 </ListGroup.Item>
               </ListGroup>
@@ -169,6 +171,7 @@ class Textarea extends Component {
           {/* <div className="globe"></div> */}
         </center>
         <br />
+        <Footer />
       </div>
     );
   }
