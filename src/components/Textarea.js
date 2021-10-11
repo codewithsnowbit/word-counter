@@ -111,6 +111,15 @@ class Textarea extends Component {
       text.innerText = "Share page";
     }, 5000);
   }
+  handleCopyText() {
+    copy(document.getElementById("data").value);
+    const text = document.getElementById("copyText");
+    text.innerText = "URL Copied 🎉";
+    setTimeout(() => {
+      const text = document.getElementById("copyText");
+      text.innerText = "Copy Text!";
+    }, 5000);
+  }
   render() {
     return (
       <div>
@@ -153,6 +162,17 @@ class Textarea extends Component {
                   Longest word count: {this.state.longCount}
                 </ListGroup.Item>{" "}
                 <hr />
+                <ListGroup.Item className="childBg share" align="right">
+                  <span
+                    id="copyText"
+                    onClick={this.handleCopyText}
+                    role="img"
+                    aria-label="clipboard"
+                  >
+                    Copy Text &nbsp;
+                    <i className="fas fa-copy" />
+                  </span>
+                </ListGroup.Item>
                 <ListGroup.Item className="childBg share" align="right">
                   <span
                     id="copy"
