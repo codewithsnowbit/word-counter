@@ -11,7 +11,7 @@ class Textarea extends Component {
       wordCount: 0,
       longCount: 0,
       charCount: 0,
-      longWord: "No data"
+      longWord: "No data 😔"
     };
     this.countWords = this.countWords.bind(this);
   }
