@@ -11,7 +11,7 @@ class Textarea extends Component {
       wordCount: 0,
       longCount: 0,
       charCount: 0,
-      longWord: "No data 😔"
+      longWord: ""
     };
     this.countWords = this.countWords.bind(this);
   }
@@ -24,15 +24,14 @@ class Textarea extends Component {
     window.removeEventListener("load", this.handleLoad);
   }
   countWords() {
+    
     var text = document.getElementById("data").value;
-    var numWords = 0;
-    for (var i = 0; i < text.length; i++) {
-      var currentCharacter = text[i];
-      if (currentCharacter === " ") {
-        numWords += 1;
-      }
-    }
-    numWords += 1;
+    if(text && text.length>0 && text!=" " && text!="\n"){
+      console.log(text.length);
+      var numWords = text.match(/(\w+)/g).length;
+    }else{
+      var numWords= 0;
+    } 
 
     this.setState((lastCount) => {
       return {
@@ -45,8 +44,9 @@ class Textarea extends Component {
     this.handleURL();
   }
   handleLongWordCount() {
+
     const text = document.getElementById("data");
-    const strSplit = text.value.split(" ");
+    const strSplit = text.value.split(/\s+/);
 
     let longestWord = 0;
     for (var i = 0; i < strSplit.length; i++) {
@@ -60,11 +60,12 @@ class Textarea extends Component {
       };
     });
     this.typing();
+
   }
   longestWord() {
     let text = document.getElementById("data").value;
     // Split the string into array
-    text = text.split(" ");
+    text = text.split(/\s+/);
     // Return the first sorted item of the Array
     const output = text.sort((a, b) => b.length - a.length)[0];
     this.setState((lastData) => {
