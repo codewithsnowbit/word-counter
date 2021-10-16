@@ -83,21 +83,25 @@ class Textarea extends Component {
   }
   handleURL() {
     const i = document.getElementById("data");
+    const c = document.getElementById("title");
     i.srcdoc = i.value;
-    window.location.hash = btoa(JSON.stringify({ h: i.value }));
+    window.location.hash = btoa(JSON.stringify({ h: i.value, c: c.value }));
   }
   handleLoad() {
     var x = atob(window.location.hash.substr(1));
     if (x) {
       x = JSON.parse(x);
       var vol = x.h;
+      var title = x.c;
       this.handleURL();
     }
     let idoc = document.getElementById("data");
+    let idocTitle = document.getElementById("title");
     idoc.onerror = function () {
       return console.log("Error");
     };
     idoc.value = vol ? vol : "";
+    idocTitle.value = title ? title : "";
     // eyJoIjoidW5kZWZpbmVkIn0
   }
   handleCopy() {
@@ -128,7 +132,12 @@ class Textarea extends Component {
           crossOrigin="anonymous"
         />
         <h1 className="text-center  title">
-          Count words with just a few clicks
+          <input
+            type="text"
+            id="title"
+            placeholder="Enter title"
+            onInput={this.handleURL}
+          />
         </h1>
         <center style={{ marginTop: 100 }}>
           {/* <textarea cols="30" rows="10" onInput={this.countWords}></textarea> */}
