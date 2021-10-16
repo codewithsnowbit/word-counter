@@ -137,6 +137,7 @@ class Textarea extends Component {
             id="title"
             placeholder="Enter title"
             onInput={this.handleURL}
+            className="form-control"
           />
         </h1>
         <center style={{ marginTop: 100 }}>

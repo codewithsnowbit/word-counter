@@ -26,9 +26,11 @@ body {
   color: #ccc9dc;
   font-family: "Press Start 2P", cursive;
 }
-.title {
-  font-weight: 900;
-  margin-top: 30px;
+#title {
+  background: #324a5f;
+  color: #ccc9dc;
+  border-radius: 0.3rem;
+  font-size: 30px;
 }
 .stats {
   font-size: 20px;
