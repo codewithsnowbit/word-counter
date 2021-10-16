@@ -24,14 +24,13 @@ class Textarea extends Component {
     window.removeEventListener("load", this.handleLoad);
   }
   countWords() {
-    
     var text = document.getElementById("data").value;
-    if(text && text.length>0 && text!=" " && text!="\n"){
+    if (text && text.length > 0 && text != " " && text != "\n") {
       console.log(text.length);
       var numWords = text.match(/(\w+)/g).length;
-    }else{
-      var numWords= 0;
-    } 
+    } else {
+      var numWords = 0;
+    }
 
     this.setState((lastCount) => {
       return {
@@ -44,7 +43,6 @@ class Textarea extends Component {
     this.handleURL();
   }
   handleLongWordCount() {
-
     const text = document.getElementById("data");
     const strSplit = text.value.split(/\s+/);
 
@@ -60,7 +58,6 @@ class Textarea extends Component {
       };
     });
     this.typing();
-
   }
   longestWord() {
     let text = document.getElementById("data").value;
@@ -81,7 +78,7 @@ class Textarea extends Component {
     });
   }
   typing() {
-    const audio = new Audio("/type3.wav");
+    const audio = new Audio("/type4.mp3");
     audio.play();
   }
   handleURL() {

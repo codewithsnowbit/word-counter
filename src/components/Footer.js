@@ -5,7 +5,7 @@ function Footer() {
     <div className="footer">
       <center>
         <h3 className="text-center footerText">
-          Faced issue?{" "}
+          Facing issue?{" "}
           <a
             href="https://github.com/snowbit-coderboi/word-count/issues"
             target="_blank"
