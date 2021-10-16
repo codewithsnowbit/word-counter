@@ -31,6 +31,8 @@ body {
   color: #ccc9dc;
   border-radius: 0.3rem;
   font-size: 30px;
+  position: relative;
+  top: 30px;
 }
 .stats {
   font-size: 20px;
